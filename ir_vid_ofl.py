@@ -18,8 +18,8 @@ GPIO.setmode(GPIO.BCM)               #RPi GPIO setup
 SPI_PORT   = 0                       #Configuring SPI
 SPI_DEVICE = 0
 mcp = Adafruit_MCP3008.MCP3008(spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE))
-"""try:
-      stri = "https://www.google.co.in"
+
+"""" stri = "https://www.google.co.in"
       data = urllib.urlopen(stri)
 except Exception as e:
        print e
@@ -27,17 +27,20 @@ except Exception as e:
        t = tkMessageBox.showerror("No internet","Connect to network /n Then Click OK")
        if t:
              os.system("sudo init 6")"""
-MacId =':'.join(['{:02x}'.format((uuid.getnode() >> i) & 0xff) for i in range(0,8*6,8)][::-1])
-URL = "http://smartadvertisement.rannlabprojects.com/IsRegistered"
-PARAMS ={"Mac":MacId}
-r = requests.post(url = URL , data = PARAMS)
-data = r.json()
-dat = json.loads(data)
-flag = dat[0]['IsPresent']
-if flag == 0:
+try:
+  MacId =':'.join(['{:02x}'.format((uuid.getnode() >> i) & 0xff) for i in range(0,8*6,8)][::-1])
+  URL = "http://smartadvertisement.rannlabprojects.com/IsRegistered"
+  PARAMS ={"Mac":MacId}
+  r= requests.post(url = URL , data = PARAMS)
+  data = r.json()
+  dat = json.loads(data)
+  flag = dat[0]['IsPresent']
+  if flag == 0:
     os.system("python /home/pi/Rannlab/reg.py")
-else:
+  else:
     pass
+except Exception as e:
+    print e
 def func2():
     pass
     execfile("/home/pi/Rannlab/Upload_Counts.py")
