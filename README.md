@@ -4,7 +4,7 @@
  A CRM panel developed using ASP.NET and MYSQL is used to store data about Advertisers and Device Registration and Links to download the videos are obtained from APIs developed with this website.
  Each device downloads videos associated to them and whenever an object stays for more than a second onfron of this device an advertisment is triggered and played on the screen.
  
-#Setup of Device:-
+# Setup of Device:-
  
  Each device is controlled using Raspberry Pi Micro-controller which is setup with raspbian OS(Linux- Debian built ). 
  A Sharp sensor connected to ADC is supplied with power using GPIO pins of raspberry pi.
