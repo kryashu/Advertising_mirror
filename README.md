@@ -4,13 +4,13 @@
  A CRM panel developed using ASP.NET and MYSQL is used to store data about Advertisers and Device Registration and Links to download the videos are obtained from APIs developed with this website.
  Each device downloads videos associated to them and whenever an object stays for more than a second onfron of this device an advertisment is triggered and played on the screen.
  
- #Setup of Device:-
+#Setup of Device:-
  
  Each device is controlled using Raspberry Pi Micro-controller which is setup with raspbian OS(Linux- Debian built ). 
  A Sharp sensor connected to ADC is supplied with power using GPIO pins of raspberry pi.
  And a monitor is used to as display device.
  
- #Programming Module:-
+#Programming Module:-
  
  Python 2.7 is used for all the device end programming.
  Each device has five python modules working simutaneously in diffrent thread as soon as our device starts.
@@ -21,7 +21,7 @@
  ir_vid_ofl.py is our main module which triggers all the other module along with this it also starts taking reading from the Sharp sensor.
  default.mp4 is a default video which is triggered if there are no videos present on the device or if there is any error playing a video.
  
-#Installation of device.
+#Installation of device:-
 
 Each device is setup in a manner that the ir_vid_ofl.py module is executed as soon as the device is booted,
 we just have to plug the raspberrypi and monitor adpater to power supply.
