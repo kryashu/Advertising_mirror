@@ -8,7 +8,7 @@
  
  Each device is controlled using Raspberry Pi Micro-controller which is setup with raspbian OS(Linux- Debian built ). 
  A Sharp sensor connected to ADC is supplied with power using GPIO pins of raspberry pi.
- And a monitor is used to as display device.
+ And a monitor is used as display device.
  
 # Programming Module:-
  
