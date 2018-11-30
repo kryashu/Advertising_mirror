@@ -13,7 +13,7 @@
 # Programming Module:-
  
  Python 2.7 is used for all the device end programming.
- Each device has five python modules working simutaneously in diffrent thread as soon as our device starts.
+ Each device has five python modules working simutaneously in different thread as soon as our device starts.
  Del.py module runs after an interval of 1 hour which is used to remove expired advertising campaigns from device.
  Upload_Counts.py runs after every minute which uploads counts of each campaings triggered to the CRM panel.
  video.py is used to get links of videos associated to the device and download them to the device.
