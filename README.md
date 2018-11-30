@@ -1,4 +1,4 @@
-# dvertising Mirror :-
+# Advertising Mirror :-
  
  This is an IOT based project which is implemented to change normal mirror to a advertising platform.
  A CRM panel developed using ASP.NET and MYSQL is used to store data about Advertisers and Device Registration and Links to download the videos are obtained from APIs developed with this website.
